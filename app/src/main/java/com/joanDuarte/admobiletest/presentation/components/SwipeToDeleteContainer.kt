@@ -35,12 +35,11 @@ fun <T> SwipeToDeleteContainer(
     item: T,
     onDelete: (T) -> Unit,
     animationDuration: Int = 500,
-    content: @Composable (T) -> Unit
-) {
+    content: @Composable (T) -> Unit) {
     var isRemoved by remember {
         mutableStateOf(false)
     }
-    var state = rememberSwipeToDismissBoxState(
+    val state = rememberSwipeToDismissBoxState(
         confirmValueChange = { value ->
             if (value == SwipeToDismissBoxValue.EndToStart) {
                 isRemoved = true

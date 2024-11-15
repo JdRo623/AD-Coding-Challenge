@@ -3,7 +3,7 @@ package com.joanDuarte.admobiletest.di
 import android.app.Application
 import androidx.room.Room
 import com.joanDuarte.admobiletest.data.local.data_source.ArticleDatabase
-import com.joanDuarte.admobiletest.domain.model.LocalArticleDataSource
+import com.joanDuarte.admobiletest.domain.article.LocalArticleDataSource
 import com.joanDuarte.admobiletest.data.local.data_source.LocalArticleDataSourceImp
 import dagger.Module
 import dagger.Provides

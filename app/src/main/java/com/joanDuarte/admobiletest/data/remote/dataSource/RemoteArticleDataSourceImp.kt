@@ -1,13 +1,11 @@
 package com.joanDuarte.admobiletest.data.remote.dataSource
 
 
-import com.joanDuarte.admobiletest.data.local.toArticle
 import com.joanDuarte.admobiletest.data.remote.toArticle
 import com.joanDuarte.admobiletest.domain.model.Article
+import com.joanDuarte.admobiletest.domain.article.RemoteArticleDataSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import java.net.UnknownHostException
 
 class RemoteArticleDataSourceImp(

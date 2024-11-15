@@ -1,4 +1,4 @@
-package com.joanDuarte.admobiletest.domain.model
+package com.joanDuarte.admobiletest.domain.article
 
 import com.joanDuarte.admobiletest.domain.model.Article
 import kotlinx.coroutines.flow.Flow

@@ -3,11 +3,9 @@ package com.joanDuarte.admobiletest.data.local.data_source
 import com.joanDuarte.admobiletest.data.local.toArticle
 import com.joanDuarte.admobiletest.data.local.toSavedArticle
 import com.joanDuarte.admobiletest.domain.model.Article
-import com.joanDuarte.admobiletest.domain.model.LocalArticleDataSource
+import com.joanDuarte.admobiletest.domain.article.LocalArticleDataSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 
 class LocalArticleDataSourceImp(
     private val articleDao: ArticleDao,

@@ -12,14 +12,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.joanDuarte.admobiletest.domain.model.Article
+import com.joanDuarte.admobiletest.presentation.model.ArticleUi
 import com.joanDuarte.admobiletest.theme.AdMobileTest
 
 @Composable
 fun ArticleItem (
-    article: Article,
+    article: ArticleUi,
     modifier: Modifier = Modifier
 ){
     Box(modifier = modifier
@@ -36,17 +38,13 @@ fun ArticleItem (
                     color = Color.DarkGray,
                     text = article.title)
             }
-            Row (modifier = Modifier){
+
+            Row (modifier = Modifier) {
                 Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    color = Color.DarkGray,
-                    text = article.author)
-            }
-            Row (modifier = Modifier){
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    color = Color.DarkGray,
-                    text = article.createdAt)
+                    modifier = modifier,
+                    color = Color.LightGray,
+                    text = "${article.author} - ${article.creationDistance}"
+                )
             }
         }
         HorizontalDivider(modifier = modifier.align(Alignment.BottomCenter))
@@ -58,11 +56,12 @@ fun ArticleItem (
 fun ArticleItemPreview() {
     AdMobileTest {
         ArticleItem(
-            Article(
+            ArticleUi(
                 "id",
                 " Title",
                 " Author",
                 "12aM",
+                "69 Minutes Ago",
                 ""
             )
         )

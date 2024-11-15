@@ -2,11 +2,11 @@ package com.joanDuarte.admobiletest.di
 
 import android.content.Context
 import com.joanDuarte.admobiletest.BuildConfig
-import com.joanDuarte.admobiletest.domain.model.ArticleRepository
+import com.joanDuarte.admobiletest.domain.article.ArticleRepository
 import com.joanDuarte.admobiletest.data.repository.ArticleRepositoryImp
 import com.joanDuarte.admobiletest.data.remote.dataSource.ArticleService
-import com.joanDuarte.admobiletest.domain.model.LocalArticleDataSource
-import com.joanDuarte.admobiletest.data.remote.dataSource.RemoteArticleDataSource
+import com.joanDuarte.admobiletest.domain.article.LocalArticleDataSource
+import com.joanDuarte.admobiletest.domain.article.RemoteArticleDataSource
 import com.joanDuarte.admobiletest.data.remote.dataSource.RemoteArticleDataSourceImp
 import com.joanDuarte.admobiletest.data.remote.util.ConnectivityObserver
 import com.joanDuarte.admobiletest.data.remote.util.NetworkConnectivityObserver
@@ -49,7 +49,8 @@ object ArchiveModule {
 
     @Provides
     fun providesArticleRepository(remoteArticleDataSource: RemoteArticleDataSource,
-                                  localArticleDataSource: LocalArticleDataSource): ArticleRepository {
+                                  localArticleDataSource: LocalArticleDataSource
+    ): ArticleRepository {
         return ArticleRepositoryImp(remoteArticleDataSource, localArticleDataSource)
     }
 
